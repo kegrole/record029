@@ -1,0 +1,126 @@
+{
+  "samples": [
+    {
+      "dangerous": false,
+      "encoding": "binary",
+      "evidence": [],
+      "first_danger_offset": null,
+      "kind": "pickle",
+      "path": "demo/samples/dict.pkl",
+      "sample": "dict.pkl"
+    },
+    {
+      "dangerous": true,
+      "encoding": "binary",
+      "evidence": [
+        "magic:0xaced0005",
+        "marker:TC_OBJECT",
+        "marker:TC_CLASSDESC",
+        "marker:TC_ENDBLOCKDATA",
+        "marker:TC_NULL"
+      ],
+      "first_danger_offset": 0,
+      "kind": "java",
+      "path": "demo/samples/java_magic.bin",
+      "sample": "java_magic.bin"
+    },
+    {
+      "dangerous": false,
+      "encoding": "binary",
+      "evidence": [],
+      "first_danger_offset": null,
+      "kind": "pickle",
+      "path": "demo/samples/list.pkl",
+      "sample": "list.pkl"
+    },
+    {
+      "dangerous": true,
+      "encoding": "base64",
+      "evidence": [
+        "opcode:GLOBAL@byte:0 (imports and pushes a module attribute by name)"
+      ],
+      "first_danger_offset": 0,
+      "kind": "pickle",
+      "path": "demo/samples/pickle_global.b64",
+      "sample": "pickle_global.b64"
+    },
+    {
+      "dangerous": true,
+      "encoding": "hex",
+      "evidence": [
+        "opcode:GLOBAL@byte:0 (imports and pushes a module attribute by name)"
+      ],
+      "first_danger_offset": 0,
+      "kind": "pickle",
+      "path": "demo/samples/pickle_global.hex",
+      "sample": "pickle_global.hex"
+    },
+    {
+      "dangerous": true,
+      "encoding": "binary",
+      "evidence": [
+        "opcode:GLOBAL@byte:0 (imports and pushes a module attribute by name)"
+      ],
+      "first_danger_offset": 0,
+      "kind": "pickle",
+      "path": "demo/samples/pickle_global.pkl",
+      "sample": "pickle_global.pkl"
+    },
+    {
+      "dangerous": true,
+      "encoding": "binary",
+      "evidence": [
+        "opcode:STACK_GLOBAL@byte:30 (imports and pushes a module attribute named on the stack)",
+        "opcode:REDUCE@byte:40 (invokes a callable with arguments from the stack)"
+      ],
+      "first_danger_offset": 30,
+      "kind": "pickle",
+      "path": "demo/samples/pickle_reduce.pkl",
+      "sample": "pickle_reduce.pkl"
+    },
+    {
+      "dangerous": false,
+      "encoding": "text",
+      "evidence": [
+        "json:plain-containers"
+      ],
+      "first_danger_offset": null,
+      "kind": "json",
+      "path": "demo/samples/plain.json",
+      "sample": "plain.json"
+    },
+    {
+      "dangerous": true,
+      "encoding": "text",
+      "evidence": [
+        "key:__reduce__"
+      ],
+      "first_danger_offset": null,
+      "kind": "json",
+      "path": "demo/samples/reduce.json",
+      "sample": "reduce.json"
+    },
+    {
+      "dangerous": true,
+      "encoding": "text",
+      "evidence": [
+        "tag:!!python/object/apply"
+      ],
+      "first_danger_offset": 0,
+      "kind": "yaml",
+      "path": "demo/samples/yaml_tag.yaml",
+      "sample": "yaml_tag.yaml"
+    }
+  ],
+  "summary": {
+    "dangerous": 7,
+    "dangerous_kinds": {
+      "java": 1,
+      "json": 1,
+      "pickle": 4,
+      "yaml": 1
+    },
+    "safe": 3,
+    "samples": 10
+  }
+}
